@@ -6,7 +6,7 @@ How Political Events and Google Searches Affect Economic Indicators
 
 ## Introduction
 
-I chose this topic because I am curious about whether political events and people's interests (shown by Google searches) can change economic indicators such as exchange rates, interest rates, and gold prices. I believe this analysis can help in understanding how news and public attention might affect the economy. In addition, I am an also investor to exchange rates so my motivation on this project to get a efficient knowlenge and being able to use it in my life.
+I chose this topic because I am curious about whether political events and people's interests (shown by Google searches) can change economic indicators such as exchange rates, interest rates, and gold prices. I believe this analysis can help in understanding how news and public attention might affect the economy. In addition, I am an also investor to exchange rates so my motivation on this project to get a efficient knowlenge and being able to use it.
 
 ## Data Sources
 
