@@ -8,6 +8,16 @@ How Political Events and Google Searches Affect Economic Indicators
 
 I chose this topic because I am curious about whether political events and people's interests (shown by Google searches) can change economic indicators such as exchange rates, interest rates, and gold prices. I believe this analysis can help in understanding how news and public attention might affect the economy. In addition, I am an also investor to exchange rates so my motivation on this project to get a efficient knowlenge and being able to use it.
 
+Research Question & Hypothesis
+
+Research Question: How do political events and Google search trends influence economic indicators such as exchange rates, interest rates, and gold prices?
+
+Hypothesis: I believe that significant political events and increased public attention (reflected through increased Google searches) directly cause noticeable fluctuations in economic indicators such as exchange rates, interest rates, and gold prices, as people react quickly to uncertainty and major news events.
+
+Time Frame
+
+I will analyze data from the last 5 years (2019-2024), focusing especially on periods around major elections and key political events.
+
 ## Data Sources
 
 I plan to use data from the following sources:
@@ -24,6 +34,7 @@ I plan to use data from the following sources:
 
 - **Google Search Trends:**
   - Google Trends (https://trends.google.com/)
+
 
 ## Methodology
 
