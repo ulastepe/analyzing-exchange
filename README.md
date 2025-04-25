@@ -71,6 +71,37 @@ In the future, I can expand my project to include:
 - More countries or a longer time period.
 - Additional data sources, such as social media, to improve the accuracy of my analysis.
 
+## Visualizations & Captions
+
+### Figure 1: Relation Between Political Events and USD/TRY
+![USD vs Events](data/processed/plot_event_vs_usd.png)
+
+* This time-series plot overlays weekly political events (solid red) with USD/TRY (blue dashed).
+* From 2019–2021, events stay low while the dollar climbs steadily.
+* Beginning mid-2021 (especially mid-2023), spikes in events align with sudden USD/TRY jumps, suggesting heightened political activity accelerates depreciation.
+
+---
+
+### Figure 2: Monthly Political Events and Gold Price Relationship
+![Monthly Events vs Gold](data/processed/plot_event_vs_gold_monthly.png)
+
+* Monthly totals of political events (solid red) are paired with average gold price (yellow dashed).
+* Months with pronounced event peaks (e.g., May 2022, Spring 2023) correspond to significant gold price jumps.
+* This suggests gold acts as a “safe haven”: during political volatility, demand (and price) spikes sharply.
+
+---
+
+### Figure 3: Correlation Matrix of Events, Searches & Economic Indicators
+![Correlation Heatmap](data/processed/correlation_heatmap.png)
+
+* **Event count vs. gold searches:** ~0.52 (moderate positive).  
+* **Event count vs. USD/TRY:** ~0.09 (weak overall).  
+* **Gold searches vs. USD/TRY:** ~0.59 (solid positive).  
+* **USD/TRY vs. gold price:** ~0.99 (near-perfect co-movement).
+
+---
+
+
 ## Author
 
 - Name: Erkan Ulaş Tepe
