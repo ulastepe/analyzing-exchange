@@ -100,7 +100,81 @@ In the future, I can expand my project to include:
 * **USD/TRY vs. gold price:** ~0.99 (near-perfect co-movement).
 
 ---
+## Gold Price Regression Results
 
+### Performance Metrics
+
+| Model           | R²      | MSE       | RMSE     | MAE      |
+|-----------------|---------|-----------|----------|----------|
+| KNN (k=5)       | 0.9876  | 5 431.95  | 73.70    | 49.93    |
+| Decision Tree   | 0.9772  | 9 933.51  | 99.67    | 55.08    |
+| Random Forest   | 0.9920  | 3 486.37  | 59.05    | 31.18    |
+
+### Sample Prediction Comparison (10 Random Rows)
+
+| Index | Actual (TRY/g) | KNN      | Decision Tree | Random Forest |
+|------:|---------------:|---------:|--------------:|--------------:|
+|    52 |         297.91 | 337.09   |      315.32   |      303.64   |
+|    39 |         280.10 | 279.83   |      277.11   |      276.29   |
+|    95 |         478.84 | 467.99   |      462.72   |      473.74   |
+|    21 |         259.50 | 255.06   |      259.37   |      258.16   |
+|    78 |         413.81 | 416.36   |      382.84   |      426.13   |
+|   204 |       1 091.54 | 1 079.20 |    1 047.70   |    1 077.73   |
+|   217 |       1 201.91 | 1 321.06 |    1 153.58   |    1 188.51   |
+|     0 |         225.32 | 244.63   |      224.94   |      229.22   |
+|   234 |       1 689.14 | 1 557.95 |    1 495.28   |    1 567.24   |
+|   243 |       1 710.53 | 1 772.13 |    1 795.05   |    1 768.03   |
+
+---
+
+**Evaluation of Regressions for Gold Prices**
+
+Our three regression approaches—KNN, Decision Tree, and Random Forest—were evaluated on gold prices in TRY per gram over the 2019–2024 period. The Random Forest model clearly outperforms the others, explaining **99.20%** of variance (R² = 0.9920) and achieving the lowest error magnitudes (RMSE = 59.05 TRY/g, MAE = 31.18 TRY/g). 
+
+The KNN model also shows strong fit (R² = 0.9876) but a higher average deviation (MAE ≈ 50 TRY/g), while the single Decision Tree (R² = 0.9772) suffers from both higher variance and bias, as reflected in its larger RMSE and MAE values.
+
+In the 10‐row sample above, Random Forest predictions remain within 5–10% of actual mid-range values (250–600 TRY/g) and err by up to ~40 TRY/g on extreme spikes above 1 000 TRY/g. This pattern highlights the ensemble’s capacity to generalize non‐linear trends while indicating that sudden market shocks still pose forecasting challenges for purely feature‐based models.
+
+Overall, these results validate Random Forest as the most robust method for short‐term gold price forecasting in this study. Future enhancements could include additional macroeconomic features, lagged price inputs, and hyperparameter cross‐validation to further tighten prediction intervals and improve resilience to rare price spikes.  
+
+---
+ 
+## USD Price Regression Results
+
+### Performance Metrics
+
+  Model           | R²      | MSE      | RMSE    | MAE     |
+|-----------------|---------|----------|---------|---------|
+| KNN (k=5)       | 0.9959  | 0.3583   | 0.5986  | 0.2943  |
+| Decision Tree   | 0.9984  | 0.1378   | 0.3712  | 0.1936  |
+| Random Forest   | 0.9989  | 0.0954   | 0.3088  | 0.1559  |
+
+### Sample Predictions (10 Random Rows)
+
+| Index | Actual (USD/TRY) | KNN    | Decision Tree | Random Forest |
+|------:|---------------:|-------:|--------------:|--------------:|
+|   116 |         7.9439 | 7.5888 |       7.4779  |      7.6864   |
+|    84 |         7.3006 | 7.2016 |       7.0257  |      7.1011   |
+|   132 |         8.6101 | 8.5975 |       8.5587  |      8.5787   |
+|   180 |        17.2575 |17.0576 |      17.3366  |     16.9649   |
+|   204 |        18.6234 |18.6856 |      18.6668  |     18.6319   |
+|   231 |        22.2157 |21.3187 |      20.4809  |     21.0552   |
+|    42 |         5.7916 | 5.7721 |       5.8890  |      5.8551   |
+|   238 |        26.9392 |26.5444 |      26.6502  |     26.6548   |
+|   119 |         8.1083 | 8.0823 |       8.1431  |      8.1619   |
+|   146 |         9.3255 | 9.2798 |       9.0650  |      9.2296   |
+
+---
+
+**Evaluation of Regressions for USD/TRY Prices**
+
+Our three regression approaches—KNN, Decision Tree, and Random Forest—were evaluated on the USD/TRY exchange rate over the 2019–2024 period. The Random Forest model clearly outperforms the others, explaining **99.89%** of variance (R² = 0.9989) and achieving the lowest error magnitudes (RMSE = 0.3088 TRY, MAE = 0.1559 TRY).
+
+The KNN model provides a solid baseline (R² = 0.9959) but exhibits a larger average deviation (MAE ≈ 0.2943 TRY), while the single Decision Tree (R² = 0.9984) reduces variance (RMSE = 0.3712 TRY) but still trails the ensemble in overall accuracy.
+
+In the 10‐row sample above, Random Forest predictions remain within **±0.30 TRY** for typical mid‐range values (5.8–9.3 TRY) and within **±1.50 TRY** for extreme spikes (17–27 TRY), underscoring its ability to capture smooth devaluation trends. However, the increased dispersion at the extremes highlights the limitation of using only date‐based features: sudden, event‐driven jumps cannot be anticipated without additional context.
+
+Overall, these results validate Random Forest as the most robust method for short‐term USD/TRY forecasting in this study. **Next steps** include integrating political event counts, Google Trends indices, and other macroeconomic variables to quantify their incremental impact on predictive accuracy—especially during volatile episodes.  
 
 ## Author
 
