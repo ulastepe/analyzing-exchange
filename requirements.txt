@@ -5,4 +5,4 @@ scipy
 statsmodels
 feedparser
 yfinance
-skicit-learn
+scikit-learn
