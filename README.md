@@ -104,11 +104,11 @@ In the future, I can expand my project to include:
 
 ### Performance Metrics
 
-| Model           | R²      | MSE       | RMSE     | MAE      |
-|-----------------|---------|-----------|----------|----------|
-| KNN (k=5)       | 0.9876  | 5 431.95  | 73.70    | 49.93    |
-| Decision Tree   | 0.9772  | 9 933.51  | 99.67    | 55.08    |
-| Random Forest   | 0.9920  | 3 486.37  | 59.05    | 31.18    |
+| Model           | R²      | 
+|-----------------|---------|
+| KNN (k=5)       | 0.9876  | 
+| Decision Tree   | 0.9772  | 
+| Random Forest   | 0.9920  | 
 
 ### Sample Prediction Comparison (10 Random Rows)
 
@@ -129,9 +129,9 @@ In the future, I can expand my project to include:
 
 **Evaluation of Regressions for Gold Prices**
 
-Our three regression approaches—KNN, Decision Tree, and Random Forest—were evaluated on gold prices in TRY per gram over the 2019–2024 period. The Random Forest model clearly outperforms the others, explaining **99.20%** of variance (R² = 0.9920) and achieving the lowest error magnitudes (RMSE = 59.05 TRY/g, MAE = 31.18 TRY/g). 
+Our three regression approaches—KNN, Decision Tree, and Random Forest—were evaluated on gold prices in TRY per gram over the 2019–2024 period. The Random Forest model clearly outperforms the others, explaining **99.20%** of variance (R² = 0.9920). 
 
-The KNN model also shows strong fit (R² = 0.9876) but a higher average deviation (MAE ≈ 50 TRY/g), while the single Decision Tree (R² = 0.9772) suffers from both higher variance and bias, as reflected in its larger RMSE and MAE values.
+The KNN model also shows strong fit , while the single Decision Tree (R² = 0.9772) suffers from both higher variance and bias.
 
 In the 10‐row sample above, Random Forest predictions remain within 5–10% of actual mid-range values (250–600 TRY/g) and err by up to ~40 TRY/g on extreme spikes above 1 000 TRY/g. This pattern highlights the ensemble’s capacity to generalize non‐linear trends while indicating that sudden market shocks still pose forecasting challenges for purely feature‐based models.
 
@@ -143,11 +143,11 @@ Overall, these results validate Random Forest as the most robust method for shor
 
 ### Performance Metrics
 
-  Model           | R²      | MSE      | RMSE    | MAE     |
-|-----------------|---------|----------|---------|---------|
-| KNN (k=5)       | 0.9959  | 0.3583   | 0.5986  | 0.2943  |
-| Decision Tree   | 0.9984  | 0.1378   | 0.3712  | 0.1936  |
-| Random Forest   | 0.9989  | 0.0954   | 0.3088  | 0.1559  |
+  Model           | R²      | 
+|-----------------|---------|
+| KNN (k=5)       | 0.9959  |
+| Decision Tree   | 0.9984  |
+| Random Forest   | 0.9989  | 
 
 ### Sample Predictions (10 Random Rows)
 
@@ -168,9 +168,9 @@ Overall, these results validate Random Forest as the most robust method for shor
 
 **Evaluation of Regressions for USD/TRY Prices**
 
-Our three regression approaches—KNN, Decision Tree, and Random Forest—were evaluated on the USD/TRY exchange rate over the 2019–2024 period. The Random Forest model clearly outperforms the others, explaining **99.89%** of variance (R² = 0.9989) and achieving the lowest error magnitudes (RMSE = 0.3088 TRY, MAE = 0.1559 TRY).
+Our three regression approaches—KNN, Decision Tree, and Random Forest—were evaluated on the USD/TRY exchange rate over the 2019–2024 period. The Random Forest model clearly outperforms the others, explaining **99.89%** of variance (R² = 0.9989) and achieving the lowest error magnitudes.
 
-The KNN model provides a solid baseline (R² = 0.9959) but exhibits a larger average deviation (MAE ≈ 0.2943 TRY), while the single Decision Tree (R² = 0.9984) reduces variance (RMSE = 0.3712 TRY) but still trails the ensemble in overall accuracy.
+The KNN model provides a solid baseline (R² = 0.9959), while the single Decision Tree (R² = 0.9984) reduces variance but still trails the ensemble in overall accuracy.
 
 In the 10‐row sample above, Random Forest predictions remain within **±0.30 TRY** for typical mid‐range values (5.8–9.3 TRY) and within **±1.50 TRY** for extreme spikes (17–27 TRY), underscoring its ability to capture smooth devaluation trends. However, the increased dispersion at the extremes highlights the limitation of using only date‐based features: sudden, event‐driven jumps cannot be anticipated without additional context.
 
