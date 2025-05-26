@@ -125,6 +125,8 @@ In the future, I can expand my project to include:
 |   234 |       1 689.14 | 1 557.95 |    1 495.28   |    1 567.24   |
 |   243 |       1 710.53 | 1 772.13 |    1 795.05   |    1 768.03   |
 
+### Figure 4: Comparison of Model Predictions vs Actual GOLD/TRY With 10 Random Samples
+![USD vs Events](data/processed/Comparison_of_Model_gold.png)
 ---
 
 **Evaluation of Regressions for Gold Prices**
@@ -164,6 +166,8 @@ Overall, these results validate Random Forest as the most robust method for shor
 |   119 |         8.1083 | 8.0823 |       8.1431  |      8.1619   |
 |   146 |         9.3255 | 9.2798 |       9.0650  |      9.2296   |
 
+### Figure 4: Comparison of Model Predictions vs Actual USD/TRY With 10 Random Samples
+![USD vs Events](data/processed/Comparison_of_Model_usd.png)
 ---
 
 **Evaluation of Regressions for USD/TRY Prices**
