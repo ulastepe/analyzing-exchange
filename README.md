@@ -100,6 +100,11 @@ In the future, I can expand my project to include:
 * **USD/TRY vs. gold price:** ~0.99 (near-perfect co-movement).
 
 ---
+
+### Data Splitting for Both Gold and Usd Models
+
+To evaluate the performance of machine learning models, I split the dataset into training and testing sets using an 80/20 ratio. Specifically, 80% of the data was used to train the models, while the remaining 20% was used to test their performance on unseen data. This ratio was chosen to ensure that the model has enough data to learn meaningful patterns, while still providing a sufficient test set for evaluating generalization ability.
+
 ## Gold Price Regression Results
 
 ### Performance Metrics
