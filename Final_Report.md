@@ -38,18 +38,24 @@ All data was merged into a unified weekly dataset. Missing values were addressed
 - Google searches for “dolar kuru” and “altın fiyatı” tended to rise in advance of or during these events.
 - Correlation matrices and lag analysis confirmed strong positive associations between search trends and economic indicators, especially for the exchange rate.
 
-### 3.2 Hypothesis Testing
+### 3.2 OLS Regression Analysis Summary
+
+- USD/TRY Model R² = 0.63** → Explained by political events and Google searches (notably "altın fiyatı").
+- Gold Price Model R² = 0.62** → Strong impact from event count and Google Trends for “altın fiyatı”.
+
+### 3.3 Hypothesis Testing
 
 Two hypotheses were tested:
 
 - **H₁:** Political event weeks significantly affect the USD/TRY exchange rate.
 - **H₂:** Google search spikes significantly affect gold prices.
-
+- USD/TRY T-Test: p = 0.0001 → Political events significantly affect USD/TRY exchange rates.
+- Gold Price T-Test: p = 0.0159 → Political events significantly affect gold prices.
 In both cases, t-tests resulted in **p-values < 0.05**, indicating statistically significant differences in economic indicator behavior during political event windows.
 
 ---
 
-### 3.3 Machine Learning Models
+### 3.4 Machine Learning Models
 
 To assess predictive capability, three machine learning models were tested on both indicators.
 
